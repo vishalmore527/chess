@@ -1,0 +1,171 @@
+.dashboard {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 2.5rem;
+}
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.dash-header h1 {
+  margin: 0 0 0.3rem;
+}
+
+.dash-sub {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.dash-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.dash-card {
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  padding: 1rem 1.1rem;
+}
+
+.dash-card.wide {
+  grid-column: span 1;
+}
+
+.task-form {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+.field-row {
+  display: grid;
+}
+
+.field-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.field-row label,
+.field-group label {
+  font-size: 0.85rem;
+  color: #374151;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.field-row input,
+.field-row textarea,
+.field-group input,
+.select-input {
+  border-radius: 0.55rem;
+  border: 1px solid #e5e7eb;
+  padding: 0.45rem 0.55rem;
+  font-size: 0.9rem;
+}
+
+.field-row textarea {
+  resize: vertical;
+}
+
+.task-list {
+  margin-top: 0.6rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.task-list.small-list {
+  max-height: 320px;
+  overflow: auto;
+}
+
+.muted {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.stats-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0;
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.86rem;
+}
+
+.stats-list li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.perf-card {
+  border-radius: 0.9rem;
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem 0.9rem;
+  background: #f9fafb;
+  max-width: 260px;
+}
+
+.perf-points {
+  margin: 0.2rem 0 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.perf-band {
+  margin: 0.1rem 0;
+  font-size: 0.9rem;
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+.perf-note {
+  margin: 0.1rem 0 0;
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.6rem 0 0;
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+}
+
+.history-list li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.history-meta {
+  color: #10b981;
+}
+
+@media (max-width: 900px) {
+  .dash-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .perf-card {
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .dash-header {
+    flex-direction: column;
+  }
+}
+
